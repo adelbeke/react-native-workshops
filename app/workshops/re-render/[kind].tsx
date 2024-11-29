@@ -1,13 +1,14 @@
-import { Button, View, Text } from "react-native";
+import { View } from "react-native";
 import {
   useFocusEffect,
   useLocalSearchParams,
   useNavigation,
 } from "expo-router";
 import { useCallback } from "react";
+import { RE_RENDERS_FEATURES } from "@/features/re-renders";
 
 type Params = {
-  kind: string;
+  kind: "counter";
 };
 
 export default function Page() {
@@ -23,8 +24,8 @@ export default function Page() {
   );
 
   return (
-    <View className={"flex-1 bg-white"}>
-      <Text className={"font-bold text-xl"}>{JSON.stringify(params)}</Text>
+    <View className={"flex-1 bg-white p-4"}>
+      {RE_RENDERS_FEATURES[params.kind]()}
     </View>
   );
 }
