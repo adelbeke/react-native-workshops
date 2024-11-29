@@ -6,7 +6,7 @@ import { SafeAreaView } from "react-native-safe-area-context";
 const Square = () => {
   useWarnReRender("Square");
 
-  return <View className={"bg-blue-500 w-28 rounded-lg"} />;
+  return <View style={styles.square} />;
 };
 
 export const Counter = () => {
@@ -17,13 +17,38 @@ export const Counter = () => {
   return (
     <SafeAreaView
       edges={["bottom"]}
-      className={"flex-1 bg-white flex-row p-4 gap-4"}
+      style={styles.container}
     >
       <Square />
-      <View className={"flex-1 justify-center items-center"}>
-        <Text className={"font-bold text-6xl"}>{count}</Text>
+      <View style={styles.countContainer}>
+        <Text style={styles.count}>{count}</Text>
         <Button title={"Increment"} onPress={() => setCount(count + 1)} />
       </View>
     </SafeAreaView>
   );
 };
+
+const styles = StyleSheet.create({
+  container: {
+    flex: 1,
+    backgroundColor: "white",
+    padding: 16,
+    gap: 8,
+    flexDirection: "row",
+  },
+  square: {
+    height: '100%',
+    width: '30%',
+    backgroundColor: "blue",
+    borderRadius: 16,
+  },
+  countContainer: {
+    flex: 1,
+    justifyContent: "center",
+    alignItems: "center",
+  },
+  count: {
+    fontSize: 48,
+    fontWeight: "bold",
+  },
+})
