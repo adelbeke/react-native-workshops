@@ -10,6 +10,9 @@ export default function Home() {
         <Link href={"/workshops/re-render/counter"}>
           <Text className={"text-blue-500 text-lg"}>Counter</Text>
         </Link>
+        <Link href={"/workshops/re-render/input"}>
+          <Text className={"text-blue-500 text-lg"}>Input</Text>
+        </Link>
       </View>
     </SafeAreaView>
   );
