@@ -1,5 +1,5 @@
 import { Button, View, Text, StyleSheet } from "react-native";
-import { memo, useState } from "react";
+import { useState } from "react";
 import { useWarnReRender } from "@/helpers/useWarnReRender";
 import { SafeAreaView } from "react-native-safe-area-context";
 
@@ -15,10 +15,7 @@ export const Counter = () => {
   const [count, setCount] = useState<number>(0);
 
   return (
-    <SafeAreaView
-      edges={["bottom"]}
-      style={styles.container}
-    >
+    <SafeAreaView edges={["bottom"]} style={styles.container}>
       <Square />
       <View style={styles.countContainer}>
         <Text style={styles.count}>{count}</Text>
@@ -37,8 +34,8 @@ const styles = StyleSheet.create({
     flexDirection: "row",
   },
   square: {
-    height: '100%',
-    width: '30%',
+    height: "100%",
+    width: "30%",
     backgroundColor: "blue",
     borderRadius: 16,
   },
@@ -51,4 +48,4 @@ const styles = StyleSheet.create({
     fontSize: 48,
     fontWeight: "bold",
   },
-})
+});
