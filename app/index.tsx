@@ -6,6 +6,9 @@ export default function Home() {
   return (
     <SafeAreaView style={styles.container}>
       <Text style={styles.title}>1. Re renders</Text>
+      <Text>
+        You have to remove extra re-renders from the following exercises
+      </Text>
       <View style={styles.links}>
         <Link href={"/workshops/re-render/counter"}>
           <Text style={styles.link}>Counter</Text>
