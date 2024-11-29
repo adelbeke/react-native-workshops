@@ -62,6 +62,12 @@ function RootLayoutNav() {
             title: "React Native Workshops",
           }}
         />
+        <Stack.Screen
+          name="re-renders"
+          options={{
+            title: "Re-renders",
+          }}
+        />
       </Stack>
     </ThemeProvider>
   );
