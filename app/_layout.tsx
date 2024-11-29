@@ -57,9 +57,16 @@ function RootLayoutNav() {
     <ThemeProvider value={colorScheme === "dark" ? DarkTheme : DefaultTheme}>
       <Stack
         screenOptions={{
-          headerShown: false,
+          headerBackButtonDisplayMode: "minimal",
         }}
-      />
+      >
+        <Stack.Screen
+          name="index"
+          options={{
+            headerShown: false,
+          }}
+        />
+      </Stack>
     </ThemeProvider>
   );
 }
