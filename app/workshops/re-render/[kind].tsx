@@ -1,4 +1,3 @@
-import { View } from "react-native";
 import {
   useFocusEffect,
   useLocalSearchParams,
@@ -23,9 +22,5 @@ export default function Page() {
     }, []),
   );
 
-  return (
-    <View className={"flex-1 bg-white p-4"}>
-      {RE_RENDERS_FEATURES[params.kind]()}
-    </View>
-  );
+  return RE_RENDERS_FEATURES[params.kind];
 }
