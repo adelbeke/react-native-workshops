@@ -7,7 +7,8 @@ export default function Home() {
     <SafeAreaView style={styles.container}>
       <Text style={styles.title}>1. Re renders</Text>
       <Text>
-        You have to remove extra re-renders from the following exercises
+        You have to remove extra re-renders from the following exercises.
+        Look at your console, every re-render will be logged with a console.warn.
       </Text>
       <View style={styles.links}>
         <Link href={"/workshops/re-render/counter"}>
