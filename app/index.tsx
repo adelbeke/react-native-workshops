@@ -5,10 +5,10 @@ import { SafeAreaView } from "react-native-safe-area-context";
 export default function Home() {
   return (
     <SafeAreaView style={styles.container}>
-      <Text style={styles.title}>1. Re renders</Text>
+      <Text style={styles.title}>Re renders</Text>
       <Text>
-        You have to remove extra re-renders from the following exercises.
-        Look at your console, every re-render will be logged with a console.warn.
+        You have to remove extra re-renders from the following exercises. Look
+        at your console, every re-render will be logged with a console.warn.
       </Text>
       <View style={styles.links}>
         <Link href={"/workshops/re-render/counter"}>
@@ -19,6 +19,9 @@ export default function Home() {
         </Link>
         <Link href={"/workshops/re-render/context"}>
           <Text style={styles.link}>Context</Text>
+        </Link>
+        <Link href={"/workshops/re-render/memoization"}>
+          <Text style={styles.link}>Memoization</Text>
         </Link>
       </View>
     </SafeAreaView>
@@ -33,11 +36,12 @@ const styles = StyleSheet.create({
     gap: 8,
   },
   title: {
-    fontSize: 20,
+    fontSize: 32,
     fontWeight: "bold",
   },
   links: {
     gap: 12,
+    marginVertical: 16,
   },
   link: {
     color: "rgb(0, 122, 255)",
