@@ -1,10 +1,11 @@
-import { StyleSheet, Text, View } from "react-native";
+import {StyleSheet, Text, View, Image} from "react-native";
 import { Link } from "expo-router";
 import { SafeAreaView } from "react-native-safe-area-context";
 
 export default function Home() {
   return (
     <SafeAreaView style={styles.container}>
+      <Image source={require('../assets/images/RNW.png')} resizeMode={"contain"} style={styles.logo}  />
       <Text style={styles.title}>Re renders</Text>
       <Text>
         You have to remove extra re-renders from the following exercises. Look
@@ -47,4 +48,8 @@ const styles = StyleSheet.create({
     color: "rgb(0, 122, 255)",
     fontSize: 16,
   },
+  logo: {
+    height: 50,
+    alignSelf: 'center'
+  }
 });

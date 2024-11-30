@@ -1,4 +1,6 @@
-## React Native Performance Workshop
+<img src="./assets/images/RNW.svg">
+
+## React Native Performance Workshops
 
 **What You'll Find:**
 
